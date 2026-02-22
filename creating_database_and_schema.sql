@@ -1,0 +1,11 @@
+--CREATE DATABASE Olist;
+--GO
+
+--USE Olist;
+--GO
+
+--CREATE SCHEMA raw;
+--GO
+
+--CREATE SCHEMA dw;
+--GO
