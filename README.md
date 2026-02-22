@@ -1,136 +1,169 @@
 # olist_sql_business_analysis
 End-to-end SQL Server business analysis of Olist Brazilian E-Commerce dataset.
 
-🛒 Olist E-Commerce Business Analysis (SQL Server)
-📌 Project Overview
+# 🛒 Olist E-Commerce Business Analysis
+## 📌 Project Overview
 
 This project performs an end-to-end SQL-based business analysis of the Olist Brazilian E-Commerce dataset (2016–2018).
 
 The objective is to evaluate:
 
-Revenue performance
+- Revenue performance  
+- Geographic demand concentration  
+- Customer behavior  
+- Delivery efficiency  
+- Seller contribution  
+- Payment trends  
+- Customer satisfaction  
 
-Geographic demand concentration
+The analysis is built using SQL Server with structured KPI computation and business-driven insights.
 
-Customer behavior
+---
 
-Delivery efficiency
+## 🗂 Dataset Source
 
-Seller contribution
+- **Dataset:** Olist Brazilian E-Commerce Public Dataset  
+- **Source:** Kaggle  
+- **Link:** https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
-Payment trends
+---
 
-Customer satisfaction
+## 🛠 Tools & Techniques Used
 
-🗂 Dataset Source
+- SQL Server  
+- Joins (Primary & Foreign Key Relationships)  
+- Aggregations (SUM, COUNT, AVG)  
+- Window Functions (Running Revenue, Ranking)  
+- CTEs (Minimal usage for clarity)  
+- Business KPI Derivation  
 
-Dataset: Olist Brazilian E-Commerce
-Source: Kaggle
-Link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+---
 
-🛠 Tools Used
+## 📊 Key KPIs Computed
 
-SQL Server
+- Total Orders  
+- Delivered Orders  
+- Delivery Rate (%)  
+- Total Revenue (price + freight_value)  
+- Average Order Value (AOV)  
+- Monthly Revenue & Running Revenue  
+- Revenue by Customer State  
+- Top Categories by Revenue  
+- Top Products by Revenue  
+- Average Delivery Days  
+- Late Delivery Rate (%)  
+- Average Freight Cost  
+- Average Items per Order  
+- Total Sellers  
+- Seller Revenue Ranking  
+- Total Unique Customers  
+- Customers by State  
+- Payment Type Mix  
+- Review Score Distribution  
 
-Joins
+---
 
-Aggregations
+# 📈 Business Insights Summary
 
-Window Functions
+## 1️⃣ Overall Performance
 
-CTEs (limited usage for clarity)
+- **Total Orders:** 99,441  
+- **Delivered Orders:** 96,478  
+- **Delivery Rate:** 97.02%  
+- **Total Revenue:** 15.42M  
+- **Average Order Value:** 159.81  
 
-Business KPI derivation
+The platform demonstrates strong operational reliability with a high delivery completion rate and stable order value.
 
-📁 Project Structure
-data/source/ → Raw CSV files
-sql/ → Database creation + KPI + Business analysis scripts
-📊 Key KPIs Computed
+---
 
-Total Orders
+## 2️⃣ Revenue Concentration (Geography)
 
-Delivered Orders
+- São Paulo (SP) generates **5.77M revenue** and **40,494 delivered orders**.
+- The **Top 5 states contribute ~73.20% of total revenue**.
 
-Delivery Rate
+Revenue is highly concentrated in a few major regions, indicating geographic dependency.
 
-Total Revenue (price + freight)
+---
 
-Average Order Value
+## 3️⃣ Growth & Seasonality
 
-Monthly Revenue + Running Revenue
+- Highest revenue month: **November 2017 (1.15M revenue, 7,288 orders)**.
+- Revenue grew **~53.54% MoM in November 2017**.
 
-Revenue by State
+The business exhibits seasonal spikes, especially during peak shopping months.
 
-Top Categories by Revenue
+---
 
-Late Delivery Rate
+## 4️⃣ Category Performance
 
-Average Delivery Days
+- Top 10 categories contribute **~62.39% of total revenue**.
+- Leading categories:
+  - health_beauty (1.41M)
+  - watches_gifts (1.26M)
+  - bed_bath_table (1.23M)
+  - sports_leisure (1.12M)
+  - computers_accessories (1.03M)
 
-Payment Type Mix
+Revenue is driven by a limited number of dominant categories.
 
-Review Score Distribution
+---
 
-Seller Revenue Ranking
+## 5️⃣ Customer Behavior & Retention
 
-Unique Customers by State
+- **Repeat Customer Rate:** ~3%  
+- **Average Orders per Customer:** 1.03  
 
-📈 Business Insights Summary
-Overall Performance
+The marketplace is primarily driven by one-time buyers, indicating a strong opportunity for retention-focused strategies.
 
-Total Orders: 99,441
+---
 
-Delivered Rate: 97.02%
+## 6️⃣ Delivery Performance
 
-Total Revenue: 15.42M
+- **Average Delivery Time:** 12.09 days  
+- **Late Delivery Rate:** 8.11%  
+- **Average Delay (Late Orders):** 8.87 days  
 
-Average Order Value: 159.81
+While delivery completion is high, delays when they occur are significant and may impact customer experience.
 
-Revenue Concentration
+---
 
-São Paulo generates 5.77M revenue.
+## 7️⃣ Customer Satisfaction
 
-Top 5 states contribute ~73.20% of total revenue.
-→ Demand is highly concentrated geographically.
+- **Average Review Score:** 4.16 / 5  
+- Review Distribution:
+  - 5-star: 59.22%
+  - 4-star: 19.71%
+  - 3-star: 8.26%
+  - 2-star: 3.05%
+  - 1-star: 9.76%
 
-Growth & Seasonality
+Overall customer sentiment is positive, but nearly 10% of orders receive 1-star ratings, indicating service gaps.
 
-November 2017 recorded highest monthly revenue (1.15M).
+---
 
-Revenue grew ~53.54% MoM in November 2017.
+## 8️⃣ Payment Behavior
 
-Customer Behavior
+- Credit Card: **78.46% of revenue**
+- Boleto: **17.96%**
+- Voucher: 2.22%
+- Debit Card: 1.35%
 
-Repeat customer rate: ~3%
+Credit card dominates transactions, with installment payments likely supporting higher-value purchases.
 
-Avg orders per customer: 1.03
-→ Marketplace relies heavily on one-time buyers.
+---
 
-Delivery Performance
+# 🎯 Executive Summary
 
-Average delivery time: 12.09 days
+Olist demonstrates strong delivery reliability (97% delivery rate) and high customer satisfaction (4.16 average rating). However, revenue is geographically concentrated and repeat customer rate is low (~3%), highlighting customer retention as the largest growth opportunity.
 
-Late delivery rate: 8.11%
+Operational improvements in logistics and targeted retention initiatives could significantly enhance long-term marketplace performance.
 
-Avg delay (late orders): 8.87 days
-→ Delivery delays present optimization opportunity.
+---
 
-Customer Satisfaction
+## 🚀 Future Enhancements
 
-Average review score: 4.16 / 5
-
-59.22% orders receive 5-star rating
-→ Overall sentiment strong, but ~10% 1-star reviews remain concern.
-
-Payment Behavior
-
-Credit card accounts for 78.46% of revenue.
-
-Boleto accounts for 17.96%.
-→ Installment-based payments likely support higher AOV.
-
-🎯 Executive Summary
-
-The Olist marketplace demonstrates strong operational reliability (97% delivery rate) and positive customer sentiment (4.16 average rating). However, revenue is highly concentrated in a few states and categories, and repeat customer rate is low (~3%), highlighting retention as the biggest growth opportunity.
-
-Logistics optimization and customer retention strategies present the highest potential business impact.
+- Integrating Tableau dashboard for visualization
+- Delivery delay vs review score correlation analysis
+- Seller performance benchmarking
+- Cohort-based customer retention analysis
