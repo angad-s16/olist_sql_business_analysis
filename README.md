@@ -1,7 +1,6 @@
-# olist_sql_business_analysis
+# 🛒 Olist E-Commerce Business Analysis
 End-to-end SQL Server business analysis of Olist Brazilian E-Commerce dataset.
 
-# 🛒 Olist E-Commerce Business Analysis
 ## 📌 Project Overview
 
 This project performs an end-to-end SQL-based business analysis of the Olist Brazilian E-Commerce dataset (2016–2018).
